@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCET Learning - Quiz Application</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>KCET Learning Quiz</h1>
+        </header>
+
+        <div id="quiz-container" class="quiz-box">
+            <div class="question-header">
+                <span id="question-number">Question 1 of 5</span>
+            </div>
+
+            <div id="question-area">
+                <h2 id="question-text">Loading question...</h2>
+                <div id="options-container" class="options-list">
+                    <!-- Options will be generated here dynamically -->
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" class="btn secondary-btn" disabled>Previous</button>
+                <button id="next-btn" class="btn primary-btn">Next</button>
+            </div>
+        </div>
+
+        <div id="result-container" class="result-box hidden">
+            <h2>Quiz Completed!</h2>
+            <div class="score-display">
+                <p>Your Score: <span id="score-text">0</span> / <span id="total-text">0</span></p>
+            </div>
+            <p id="feedback-message"></p>
+            <button id="restart-btn" class="btn primary-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
