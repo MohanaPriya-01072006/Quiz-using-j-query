@@ -1,0 +1,159 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+/* Quiz Box Styling */
+.quiz-box,
+.result-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.question-header {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+#question-text {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/* Custom Radio Button Styling */
+.option-label {
+    display: block;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.option-label:hover {
+    background-color: #f9f9f9;
+    border-color: #bdc3c7;
+}
+
+.option-label input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #3498db;
+    transform: scale(1.2);
+}
+
+/* Highlight selected option purely with CSS if needed, 
+   but we can also do it via JS for stronger visual feedback */
+.option-label.selected {
+    border-color: #3498db;
+    background-color: #ebf5fb;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.secondary-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background-color: #7f8c8d;
+}
+
+/* Result Box */
+.result-box {
+    text-align: center;
+}
+
+.result-box h2 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#feedback-message {
+    margin-bottom: 25px;
+    color: #7f8c8d;
+}
